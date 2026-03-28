@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solabucks | Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-mug-hot"></i> Solabucks
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="order.html" class="btn-order">Order Now</a></li>
+            <li><a href="login.html" class="nav-login"><i class="fas fa-user"></i> Login</a></li>
+            <li><a href="order.html" id="cartNav" class="cart-link" style="display:none;"><i class="fas fa-shopping-cart"></i> Cart (<span id="cartCount">0</span>)</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <h2>Our Specialties</h2>
+        
+        <!-- Hot Coffees -->
+        <h3 class="menu-category">☕ Hot Coffees</h3>
+        <div class="menu-grid">
+            <!-- Item 1 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=500&q=60" alt="Latte">
+                <div class="card-content">
+                    <h3>Solar Latte</h3>
+                    <p>Espresso with steamed milk and a touch of vanilla.</p>
+                    <span class="price">200</span>
+                    <button class="add-btn" onclick="addToCart('Solar Latte', 200)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=60" alt="Mocha">
+                <div class="card-content">
+                    <h3>Cosmic Mocha</h3>
+                    <p>Chocolate, espresso, and frothy milk whipped together.</p>
+                    <span class="price">250</span>
+                    <button class="add-btn" onclick="addToCart('Cosmic Mocha', 250)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=500&q=60" alt="Cappuccino">
+                <div class="card-content">
+                    <h3>Sunrise Cappuccino</h3>
+                    <p>Equal parts espresso, steamed milk, and milk foam.</p>
+                    <span class="price">300</span>
+                    <button class="add-btn" onclick="addToCart('Sunrise Cappuccino', 300)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=500&q=60" alt="Americano">
+                <div class="card-content">
+                    <h3>Solar Americano</h3>
+                    <p>Rich espresso shots topped with hot water.</p>
+                    <span class="price">400</span>
+                    <button class="add-btn" onclick="addToCart('Solar Americano', 400)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=500&q=60" alt="Macchiato">
+                <div class="card-content">
+                    <h3>Starboard Macchiato</h3>
+                    <p>Espresso with a dollop of creamy foam.</p>
+                    <span class="price">450</span>
+                    <button class="add-btn" onclick="addToCart('Starboard Macchiato', 450)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 6 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=60" alt="Espresso">
+                <div class="card-content">
+                    <h3>Pure Shot Espresso</h3>
+                    <p>Double shot of our signature dark roast.</p>
+                    <span class="price">300</span>
+                    <button class="add-btn" onclick="addToCart('Pure Shot Espresso', 300)">Add to Order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cold Drinks -->
+        <h3 class="menu-category">🧊 Cold Drinks</h3>
+        <div class="menu-grid">
+            <!-- Item 7 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=60" alt="Iced Coffee">
+                <div class="card-content">
+                    <h3>Arctic Iced Coffee</h3>
+                    <p>Chilled espresso over ice with your choice of milk.</p>
+                    <span class="price">200</span>
+                    <button class="add-btn" onclick="addToCart('Arctic Iced Coffee', 200)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 8 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=500&q=60" alt="Cold Brew">
+                <div class="card-content">
+                    <h3>Midnight Cold Brew</h3>
+                    <p>Smooth, slow-steeped for 20 hours.</p>
+                    <span class="price">275</span>
+                    <button class="add-btn" onclick="addToCart('Midnight Cold Brew', 275)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 9 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=500&q=60" alt="Frappuccino">
+                <div class="card-content">
+                    <h3>Solar Frappuccino</h3>
+                    <p>Blended ice, coffee, and vanilla bean flavor.</p>
+                    <span class="price">250</span>
+                    <button class="add-btn" onclick="addToCart('Solar Frappuccino', 250)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 10 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=500&q=60" alt="Iced Latte">
+                <div class="card-content">
+                    <h3>Ice Galaxy Latte</h3>
+                    <p>Espresso and cold milk over ice.</p>
+                    <span class="price">300</span>
+                    <button class="add-btn" onclick="addToCart('Ice Galaxy Latte', 300)">Add to Order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specialty Teas -->
+        <h3 class="menu-category">🍵 Specialty Teas</h3>
+        <div class="menu-grid">
+            <!-- Item 11 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=500&q=60" alt="Matcha Latte">
+                <div class="card-content">
+                    <h3>Green Energy Matcha</h3>
+                    <p>Premium matcha green tea with steamed milk.</p>
+                    <span class="price">150</span>
+                    <button class="add-btn" onclick="addToCart('Green Energy Matcha', 150)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 12 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=500&q=60" alt="Chai Latte">
+                <div class="card-content">
+                    <h3>Spiced Chai Latte</h3>
+                    <p>Aromatic black tea with spices and milk.</p>
+                    <span class="price">175</span>
+                    <button class="add-btn" onclick="addToCart('Spiced Chai Latte', 175)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 13 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=500&q=60" alt="Hot Chocolate">
+                <div class="card-content">
+                    <h3>Moonlit Hot Chocolate</h3>
+                    <p>Rich chocolate melted into steamed milk.</p>
+                    <span class="price">199</span>
+                    <button class="add-btn" onclick="addToCart('Moonlit Hot Chocolate', 199)">Add to Order</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bakery / Pastries -->
+        <h3 class="menu-category">🥐 Fresh Bakery</h3>
+        <div class="menu-grid">
+            <!-- Item 14 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=60" alt="Croissant">
+                <div class="card-content">
+                    <h3>Butter Croissant</h3>
+                    <p>Flaky, buttery layers of fresh baked goodness.</p>
+                    <span class="price">299</span>
+                    <button class="add-btn" onclick="addToCart('Butter Croissant', 299)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 15 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=500&q=60" alt="Blueberry Muffin">
+                <div class="card-content">
+                    <h3>Blueberry Bliss Muffin</h3>
+                    <p>Moist muffin bursting with fresh blueberries.</p>
+                    <span class="price">325</span>
+                    <button class="add-btn" onclick="addToCart('Blueberry Bliss Muffin', 325)">Add to Order</button>
+                </div>
+            </div>
+            <!-- Item 16 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=60" alt="Bagel">
+                <div class="card-content">
+                    <h3>Sunrise Bagel</h3>
+                    <p>Freshly baked bagel with cream cheese.</p>
+                    <span class="price">375</span>
+                    <button class="add-btn" onclick="addToCart('Sunrise Bagel', 375)">Add to Order</button>
+                </div>
+            </div>
+            
+            <!-- Item 19 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=60" alt="Cookie">
+                <div class="card-content">
+                    <h3>Chocolate Chip Cookie</h3>
+                    <p>Warm, chewy cookie loaded with chocolate chips.</p>
+                    <span class="price">250</span>
+                    <button class="add-btn" onclick="addToCart('Chocolate Chip Cookie', 250)">Add to Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;  indian coffee house -solabucks</p>
+        <div class="socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

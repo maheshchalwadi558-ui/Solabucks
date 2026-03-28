@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solabucks | Order</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-mug-hot"></i> Solabucks
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="order.html" class="btn-order">Order Now</a></li>
+            <li><a href="login.html" class="nav-login"><i class="fas fa-user"></i> Login</a></li>
+            <li><a href="order.html" id="cartNav" class="cart-link" style="display:none;"><i class="fas fa-shopping-cart"></i> Cart (<span id="cartCount">0</span>)</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Order Section -->
+    <section id="order" class="contact-section">
+        <h2>Place Your Order</h2>
+        <div class="order-section-wrapper">
+            <div class="cart-preview" id="cartPreview">
+                <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+                <div id="cartItemsList">Add items from the menu page.</div>
+                <div class="cart-total" id="cartTotal">Total: ₹0.00/-</div>
+            </div>
+            <div class="form-container">
+                <form id="orderForm">
+                    <div class="input-group">
+                        <label><i class="fas fa-user"></i> Name</label>
+                        <input type="text" id="orderName" required placeholder="Your Name">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-phone"></i> Phone Number</label>
+                        <input type="tel" id="orderPhone" required placeholder="Your Phone Number">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="orderEmail" required placeholder="Your Email">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-sticky-note"></i> Special Notes (optional)</label>
+                        <textarea id="orderNotes" rows="3" placeholder="Any special requests..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" id="placeOrderBtn">Place Order</button>
+                </form>
+                <div id="responseMessage"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;  indian coffee house -solabucks</p>
+        <div class="socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

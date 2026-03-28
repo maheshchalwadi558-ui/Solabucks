@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Solabucks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <i class="fas fa-mug-hot auth-logo"></i>
+                <h1>Solabucks</h1>
+                <p>the soul of solapur in evey sip..</p>
+            </div>
+            
+            <form id="loginForm" class="auth-form">
+                <div id="loginError" class="error-msg"></div>
+                <div class="input-group">
+                    <label><i class="fas fa-envelope"></i> Email </label>
+                    <input type="email" id="loginEmail" required placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn-submit" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </form>
+            
+            <div class="auth-divider">
+                <span>New to Solabucks?</span>
+            </div>
+            
+            <form id="registerForm" class="auth-form">
+                <div id="registerError" class="error-msg"></div>
+                <div class="input-group">
+                    <label><i class="fas fa-user"></i> Full Name</label>
+                    <input type="text" id="regName" required placeholder="Your full name">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-phone"></i> Phone Number</label>
+                    <input type="tel" id="regPhone" required placeholder="Your phone number">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="regEmail" required placeholder="Your email">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="regPassword" required placeholder="Create password (min 6 chars)">
+                </div>
+                <button type="submit" class="btn-submit btn-register" id="registerBtn">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+            </form>
+            
+            <a href="index.html" class="auth-back">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
